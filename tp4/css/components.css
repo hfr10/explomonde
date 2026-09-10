@@ -1,0 +1,50 @@
+/* Composants : filtre, grille de cartes, carte pays, panneau de détail */
+
+.filtre {
+  margin-top: var(--espace-m);
+}
+
+.grille-pays {
+  list-style: none;
+  margin: var(--espace-m) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--espace-m);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.carte-pays {
+  background: var(--couleur-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+  padding: var(--espace-m);
+  text-align: left;
+  cursor: pointer;
+}
+
+.carte-pays h3 {
+  margin-top: 0;
+}
+
+.carte-pays dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--espace-xs) var(--espace-m);
+}
+
+.carte-pays dt {
+  font-weight: 600;
+}
+
+.carte-pays dd {
+  margin: 0;
+}
+
+.detail:not(:empty) {
+  margin-top: var(--espace-l);
+  padding: var(--espace-m);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+  background: var(--couleur-carte);
+}

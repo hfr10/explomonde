@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExploMonde — Rechercher un pays dans le monde</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu principal</a>
+
+  <header>
+    <h1>ExploMonde</h1>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#recherche">Recherche</a></li>
+        <li><a href="#resultats">Résultats</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section id="recherche">
+      <h2>Rechercher un pays</h2>
+      <form>
+        <label for="q">Nom du pays</label>
+        <input type="search" id="q" name="q">
+        <button type="submit">Rechercher</button>
+      </form>
+
+      <div class="filtre">
+        <label for="filtre-region">Filtrer par région</label>
+        <select id="filtre-region">
+          <option value="">Toutes les régions</option>
+          <option value="Europe">Europe</option>
+          <option value="Asie">Asie</option>
+          <option value="Amériques">Amériques</option>
+          <option value="Afrique">Afrique</option>
+          <option value="Océanie">Océanie</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="resultats">
+      <h2>Résultats</h2>
+      <p id="statut" role="status"></p>
+      <div id="resultats-liste" class="grille-pays"></div>
+      <div id="detail" class="detail" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projet pédagogique ExploMonde.</p>
+  </footer>
+</body>
+</html>
