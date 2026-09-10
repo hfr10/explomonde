@@ -1,0 +1,86 @@
+/* Style de base — Mobile First, aucune media query (le thème sombre passe par prefers-color-scheme) */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: var(--espace-m);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  background: var(--couleur-fond);
+  color: var(--couleur-texte);
+}
+
+h1 {
+  font-size: var(--taille-titre);
+  margin: 0 0 var(--espace-m);
+}
+
+h2 {
+  margin-top: var(--espace-l);
+}
+
+a {
+  color: var(--couleur-primaire);
+}
+
+:focus-visible {
+  outline: 3px solid var(--couleur-primaire);
+  outline-offset: 2px;
+}
+
+.lien-evitement {
+  position: absolute;
+  top: calc(-1 * var(--espace-xl));
+  left: var(--espace-s);
+  padding: var(--espace-s) var(--espace-m);
+  background: var(--couleur-primaire);
+  color: #fff;
+  border-radius: var(--rayon);
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.lien-evitement:focus {
+  top: var(--espace-s);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: var(--espace-m);
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espace-s);
+  align-items: end;
+}
+
+label {
+  display: block;
+  width: 100%;
+  margin-bottom: var(--espace-xs);
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: var(--espace-s) var(--espace-m);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+  background: var(--couleur-carte);
+  color: inherit;
+}
+
+button {
+  border: 0;
+  background: var(--couleur-primaire);
+  color: #fff;
+  cursor: pointer;
+}
