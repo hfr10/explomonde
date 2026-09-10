@@ -1,0 +1,60 @@
+/* Composants : grille, carte pays, panneau d'état (chargement / vide / erreur) */
+
+.grille-pays {
+  list-style: none;
+  margin: var(--espace-m) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--espace-m);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.carte-pays {
+  background: var(--couleur-carte);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+  padding: var(--espace-m);
+  text-align: left;
+}
+
+.carte-pays h3 {
+  margin-top: 0;
+}
+
+.carte-pays img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--rayon);
+  margin-bottom: var(--espace-s);
+  background: var(--couleur-bordure);
+}
+
+.carte-pays dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--espace-xs) var(--espace-m);
+}
+
+.carte-pays dt {
+  font-weight: 600;
+}
+
+.carte-pays dd {
+  margin: 0;
+}
+
+.etat {
+  margin-top: var(--espace-m);
+  padding: var(--espace-l);
+  border: 1px solid var(--couleur-bordure);
+  border-radius: var(--rayon);
+  background: var(--couleur-carte);
+  text-align: center;
+}
+
+.etat button {
+  margin-top: var(--espace-m);
+}

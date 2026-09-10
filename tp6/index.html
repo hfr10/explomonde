@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ExploMonde : recherchez un pays et consultez sa capitale, sa région et sa population, à partir de l'API REST Countries.">
+  <meta name="theme-color" content="#1b5fd0">
+  <title>ExploMonde — Rechercher un pays dans le monde</title>
+
+  <link rel="preconnect" href="https://restcountries.com" crossorigin>
+  <link rel="dns-prefetch" href="https://restcountries.com">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu principal</a>
+
+  <header>
+    <h1>ExploMonde</h1>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#recherche">Recherche</a></li>
+        <li><a href="#resultats">Résultats</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section id="recherche">
+      <h2>Rechercher un pays</h2>
+      <form id="form-recherche">
+        <label for="q">Nom du pays</label>
+        <input type="search" id="q" name="q" autocomplete="off">
+        <button type="submit">Rechercher</button>
+      </form>
+    </section>
+
+    <section id="resultats">
+      <h2>Résultats</h2>
+      <p id="statut" role="status"></p>
+      <div id="resultats-liste" class="grille-pays"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Données : REST Countries. Projet pédagogique ExploMonde.</p>
+  </footer>
+</body>
+</html>

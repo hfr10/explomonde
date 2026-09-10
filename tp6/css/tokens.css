@@ -1,0 +1,33 @@
+/* Design tokens : toutes les valeurs réutilisables du projet */
+:root {
+  /* Couleurs */
+  --couleur-fond: #f6f6f4;
+  --couleur-texte: #1b1b1b;
+  --couleur-primaire: #1b5fd0;
+  --couleur-carte: #ffffff;
+  --couleur-bordure: #d8d8d4;
+
+  /* Rayon */
+  --rayon: 10px;
+
+  /* Espacements */
+  --espace-xs: 4px;
+  --espace-s: 8px;
+  --espace-m: 16px;
+  --espace-l: 24px;
+  --espace-xl: 40px;
+
+  /* Titre fluide */
+  --taille-titre: clamp(1.8rem, 1.1rem + 3vw, 3rem);
+}
+
+/* Thème sombre : on surcharge UNIQUEMENT les variables de couleur */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --couleur-fond: #15171b;
+    --couleur-texte: #e8e8e8;
+    --couleur-primaire: #7fb2ff;
+    --couleur-carte: #21252b;
+    --couleur-bordure: #363b42;
+  }
+}
