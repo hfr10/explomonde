@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ExploMonde — Rechercher un pays dans le monde</title>
+</head>
+<body>
+  <a class="lien-evitement" href="#contenu">Aller au contenu principal</a>
+
+  <header>
+    <h1>ExploMonde</h1>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="#recherche">Recherche</a></li>
+        <li><a href="#resultats">Résultats</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenu">
+    <section id="recherche">
+      <h2>Rechercher un pays</h2>
+      <form>
+        <label for="q">Nom du pays</label>
+        <input type="search" id="q" name="q">
+        <button type="submit">Rechercher</button>
+      </form>
+    </section>
+
+    <section id="resultats">
+      <h2>Résultats</h2>
+      <p id="statut" role="status"></p>
+
+      <article>
+        <h3>France</h3>
+        <dl>
+          <dt>Capitale</dt>
+          <dd>Paris</dd>
+          <dt>Région</dt>
+          <dd>Europe</dd>
+          <dt>Population</dt>
+          <dd>67 391 582</dd>
+        </dl>
+      </article>
+
+      <article>
+        <h3>Japon</h3>
+        <dl>
+          <dt>Capitale</dt>
+          <dd>Tokyo</dd>
+          <dt>Région</dt>
+          <dd>Asie</dd>
+          <dt>Population</dt>
+          <dd>125 836 021</dd>
+        </dl>
+      </article>
+
+      <article>
+        <h3>Brésil</h3>
+        <dl>
+          <dt>Capitale</dt>
+          <dd>Brasilia</dd>
+          <dt>Région</dt>
+          <dd>Amériques</dd>
+          <dt>Population</dt>
+          <dd>212 559 417</dd>
+        </dl>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projet pédagogique ExploMonde.</p>
+  </footer>
+</body>
+</html>
