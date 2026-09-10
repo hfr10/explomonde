@@ -3,7 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ExploMonde : recherchez un pays et consultez sa capitale, sa région et sa population, à partir de l'API REST Countries.">
+  <meta name="theme-color" content="#1b5fd0">
   <title>ExploMonde — Rechercher un pays dans le monde</title>
+
+  <link rel="preconnect" href="https://restcountries.com" crossorigin>
+  <link rel="dns-prefetch" href="https://restcountries.com">
+
   <link rel="stylesheet" href="css/tokens.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/components.css">
@@ -42,5 +48,10 @@
   <footer>
     <p>Données : REST Countries. Projet pédagogique ExploMonde.</p>
   </footer>
+
+  <dialog id="detail">
+    <div id="detail-contenu"></div>
+    <button type="button" id="detail-fermer">Fermer</button>
+  </dialog>
 </body>
 </html>

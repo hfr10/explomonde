@@ -1,0 +1,12 @@
+Défauts d'accessibilité trouvés dans le TP1 et corrigés au TP2 :
+
+- La balise <html> n'avait pas d'attribut lang -> ajout de lang="fr"
+- Le <title> n'était pas explicite ("ExploMonde") -> "ExploMonde — Rechercher un pays dans le monde"
+- Il n'y avait pas de lien d'évitement -> ajout de <a class="lien-evitement" href="#contenu"> en début de <body>
+- Le champ de recherche n'avait pas de <label> (seulement un placeholder) -> <label for="q"> associé à <input id="q">
+- Le <nav> n'était pas nommé -> aria-label="Navigation principale"
+- Il n'y avait pas de zone de statut pour les résultats -> <p id="statut" role="status">
+- La cible du lien d'évitement n'existait pas -> id="contenu" ajouté sur <main>
+
+Navigation clavier vérifiée : premier tab = "Aller au contenu principal",
+tous les éléments interactifs atteignables, focus visible, aucun piège.

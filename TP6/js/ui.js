@@ -10,7 +10,6 @@ function ligne(cle, valeur) {
   return fragment;
 }
 
-// Renvoie un <article> représentant un pays
 export function creerCarte(pays) {
   const article = document.createElement("article");
   article.className = "carte-pays";
@@ -21,6 +20,7 @@ export function creerCarte(pays) {
     image.src = pays.drapeau;
     image.alt = pays.drapeauAlt || `Drapeau : ${pays.nom}`;
     image.loading = "lazy";
+    image.decoding = "async";
     image.width = 320;
     image.height = 213;
     article.append(image);
@@ -40,7 +40,25 @@ export function creerCarte(pays) {
   return article;
 }
 
-// Bloc d'état simple (chargement / liste vide)
+// Contenu du détail (affiché dans la boîte de dialogue)
+export function creerDetail(pays) {
+  const fragment = document.createDocumentFragment();
+
+  const titre = document.createElement("h2");
+  titre.textContent = pays.nom;
+
+  const dl = document.createElement("dl");
+  dl.append(
+    ligne("Capitale", pays.capitale),
+    ligne("Région", pays.region),
+    ligne("Population", pays.population.toLocaleString("fr-FR")),
+    ligne("Code", pays.code)
+  );
+
+  fragment.append(titre, dl);
+  return fragment;
+}
+
 export function creerEtat(texte) {
   const bloc = document.createElement("p");
   bloc.className = "etat";
@@ -48,7 +66,6 @@ export function creerEtat(texte) {
   return bloc;
 }
 
-// Bloc d'erreur avec bouton Réessayer
 export function creerErreur(texte, surReessai) {
   const bloc = document.createElement("div");
   bloc.className = "etat";
